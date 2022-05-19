@@ -129,9 +129,9 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   background-clip: text;
   text-fill-color: transparent;
   background-color: #b0bcd4;
-  background-image: -webkit-linear-gradient(bottom right, #52658c, #b0bcd4);
-  background-image: -o-linear-gradient(bottom right, #52658c, #b0bcd4);
-  background-image: linear-gradient(to top left, #52658c, #b0bcd4);
+  background-image: -webkit-linear-gradient(bottom right, #ffffff, #52658c);
+  background-image: -o-linear-gradient(bottom right, #ffffff, #52658c);
+  background-image: linear-gradient(to top left, #ffffff, #52658c);
   position: relative;
 }
 
@@ -503,12 +503,12 @@ button:focus {
   cursor: pointer;
   text-align: center;
   border-radius: 4px;
-  background-color: white;
+  background-color: #ffffff;
   box-shadow: 0px 8px 9px 0px rgba(96, 94, 94, 0.17);
 }
 
 .back-to-top i {
-  background: linear-gradient(to right, #52658c 0%, #b0bcd4 100%);
+  background: linear-gradient(to right, #ffffff 0%, #52658c 100%);
   -webkit-background-clip: text;
   font-size: 20px;
   -webkit-transition: all 0.3s ease-in-out;
@@ -526,8 +526,7 @@ button:focus {
 }
 
 .menu-bg {
-  background: -webkit-linear-gradient(left, #52658c 0%, #b0bcd4 100%) !important;
-  background: linear-gradient(to right, #52658c 0%, #b0bcd4 100%) !important;
+  background: #ffffff !important;
   box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.1);
   z-index: 9999;
   padding: 5px;
@@ -547,15 +546,15 @@ button:focus {
 }
 
 .menu-bg .navbar-nav .nav-link {
-  color: #ffffff !important;
+  color: #52658c !important;
 }
 
 .menu-bg .navbar-nav .nav-link:hover {
-  color: #ffffff !important;
+  color: #0a87da !important;
 }
 
 .menu-bg .navbar-nav .active {
-  color: #ffffff !important;
+  color: #0a87da !important;
 }
 
 .navbar-expand-md .navbar-nav .nav-link {
@@ -637,9 +636,9 @@ button:focus {
   height: 100%;
   top: 0px;
   left: 0px;
-  background-image: -moz-linear-gradient(0deg, #52658c 0%, #b0bcd4 100%);
-  background-image: -webkit-linear-gradient(0deg, #52658c 0%, #b0bcd4 100%);
-  background-image: -ms-linear-gradient(0deg, #52658c 0%, #b0bcd4 100%);
+  background-image: -moz-linear-gradient(0deg, #ffffff 0%, #52658c 100%);
+  background-image: -webkit-linear-gradient(0deg, #ffffff 0%, #52658c 100%);
+  background-image: -ms-linear-gradient(0deg, #ffffff 0%, #52658c 100%);
 }
 
 .hero-area .contents {
@@ -696,9 +695,9 @@ button:focus {
   height: 100%;
   top: 0px;
   left: 0px;
-  background-image: -moz-linear-gradient(0deg, #52658c 0%, #b0bcd4 100%);
-  background-image: -webkit-linear-gradient(0deg, #52658c 0%, #b0bcd4 100%);
-  background-image: -ms-linear-gradient(0deg, #52658c 0%, #b0bcd4 100%);
+  background-image: -moz-linear-gradient(0deg, #ffffff 0%, #52658c 100%);
+  background-image: -webkit-linear-gradient(0deg, #ffffff 0%, #52658c 100%);
+  background-image: -ms-linear-gradient(0deg, #ffffff 0%, #52658c 100%);
 }
 
 .hero-area-2 .contents {
@@ -2157,9 +2156,9 @@ textarea {
 }
 
 footer .footer-Content {
-  background-image: -moz-linear-gradient(0deg, #52658c 0%, #b0bcd4 100%);
-  background-image: -webkit-linear-gradient(0deg, #52658c 0%, #b0bcd4 100%);
-  background-image: -ms-linear-gradient(0deg, #52658c 0%, #b0bcd4 100%);
+  background-image: -moz-linear-gradient(0deg, #ffffff 0%, #52658c 100%);
+  background-image: -webkit-linear-gradient(0deg, #ffffff 0%, #52658c 100%);
+  background-image: -ms-linear-gradient(0deg, #ffffff 0%, #52658c 100%);
   padding: 60px 0 0px;
   color: #546E7A;
 }
