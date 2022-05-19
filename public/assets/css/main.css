@@ -553,11 +553,11 @@ button:focus {
 }
 
 .menu-bg .navbar-nav .nav-link:hover {
-  color: #0a87da !important;
+  color: #52658c !important;
 }
 
 .menu-bg .navbar-nav .active {
-  color: #0a87da !important;
+  color: #52658c !important;
 }
 
 .navbar-expand-md .navbar-nav .nav-link {
@@ -576,7 +576,7 @@ button:focus {
   left: 0;
   width: 0;
   height: 2px;
-  background: #ffffff;
+  background: #52658c;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
@@ -602,12 +602,12 @@ button:focus {
 .navbar-expand-md .navbar-nav .nav-link.active:before,
 .navbar-expand-md .navbar-nav .nav-link.open,
 .navbar-expand-md .navbar-nav .open > .nav-link {
-  color: #ffffff;
+  color: #fff;
 }
 
 .navbar-expand-md .navbar-toggler {
   background: transparent;
-  border: 1px solid #fff;
+  border: 1px solid #52658c;
   border-radius: 3px;
   margin: 5px;
   cursor: pointer;
@@ -615,7 +615,7 @@ button:focus {
 }
 
 .navbar-expand-md .navbar-toggler i {
-  color: #fff !important;
+  color: #52658c !important;
 }
 
 .navbar-expand-md .navbar-toggler:focus {

@@ -180,7 +180,7 @@
     padding: 0;
   }
   .bg-inverse {
-    background: #191c1e;
+    background: #fff;
   }
   .navbar-expand-md .navbar-brand,
   .navbar-expand-md .navbar-toggler {
@@ -194,6 +194,7 @@
     text-align: left;
     margin-left: 20px;
     margin-right: 20px;
+    color:#52658c
   }
   .btn-trial {
     display: none;
@@ -300,7 +301,7 @@
     padding: 0;
   }
   .bg-inverse {
-    background: #191c1e;
+    background: #fff;
   }
   .navbar-expand-md .navbar-brand,
   .navbar-expand-md .navbar-toggler {
