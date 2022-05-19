@@ -495,8 +495,8 @@ button:focus {
 .back-to-top {
   display: none;
   position: fixed;
-  bottom: 18px;
-  right: 15px;
+  bottom: 20px;
+  left: 49%;
   width: 45px;
   height: 45px;
   line-height: 50px;
@@ -516,7 +516,10 @@ button:focus {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
+.fa_custom {
+  color: 
+  #52658c
+  }
 /* ==========================================================================
    Navbar Style
    ========================================================================== */
@@ -697,7 +700,7 @@ button:focus {
   left: 0px;
   background-image: -moz-linear-gradient(0deg, #ffffff 0%, #52658c 100%);
   background-image: -webkit-linear-gradient(0deg, #ffffff 0%, #52658c 100%);
-  background-image: -ms-linear-gradient(0deg, #ffffff 0%, #52658c 100%);
+  background-image: -ms-linear-gradient(0deg, #ffffff 0%, #52658c 100%); 
 }
 
 .hero-area-2 .contents {
@@ -709,6 +712,13 @@ button:focus {
   font-size: 42px;
   line-height: 60px;
   margin-bottom: 25px;
+  font-weight: 600;
+}
+.hero-area-2 .contents h3 {
+  color: #fff;
+  font-size: 32px;
+  line-height: 60px;
+  margin-bottom: 10px;
   font-weight: 600;
 }
 
