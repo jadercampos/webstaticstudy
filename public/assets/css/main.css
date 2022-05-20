@@ -173,6 +173,36 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   color: #fff;
   box-shadow: 0px 8px 9px 0px rgba(96, 94, 94, 0.17);
 }
+.btn-user {
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  border-color: #52658c;
+  color: #52658c !important;
+  background-image: -moz-linear-gradient(0deg, #ffffff 0%, #b0bcd4 100%);
+  background-image: -webkit-linear-gradient(0deg, #ffffff 0%, #b0bcd4 100%);
+  background-image: -ms-linear-gradient(0deg, #ffffff 0%, #b0bcd4 100%);
+  position: relative;
+  z-index: 1;
+}
+
+.btn-user:hover {
+  border-color: #52658c;
+  box-shadow: 0px 8px 9px 0px rgba(96, 94, 94, 0.17);
+}
+
+.btn-common-wa {
+  background-image: -moz-linear-gradient(0deg, #25d366 0%, #abd3b9 100%);
+  background-image: -webkit-linear-gradient(0deg, #25d366 0%, #abd3b9 100%);
+  background-image: -ms-linear-gradient(0deg, #25d366 0%, #abd3b9 100%);
+  position: relative;
+  z-index: 1;
+}
+
+.btn-common-wa:hover {
+  color: #fff;
+  box-shadow: 0px 8px 9px 0px rgba(96, 94, 94, 0.17);
+}
 
 .btn-effect {
   overflow: hidden;
@@ -290,16 +320,27 @@ button:focus {
 }
 
 .btn-subtitle {
-  color: #191c1e;
+  color: #fff;
   font-family: 'Poppins', sans-serif;
-  background: #dbecff;
+  background: #52658c;
   text-align: center;
-  border-radius: 30px;
+  border-radius: 5px;
   padding: 6px 30px;
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 20px;
   font-size: 14px;
+}
+
+hr.section-line { 
+  width: 400px;
+  border: 0; 
+  margin-bottom: 50px;
+  height: 3px; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #52658c, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #52658c, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #52658c, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #52658c, #f0f0f0); 
 }
 
 .clear {
@@ -667,6 +708,9 @@ button:focus {
   margin-right: 20px;
   text-transform: uppercase;
 }
+.hero-area .contents .btn:hover {
+background-color: #00b09b;
+}
 
 .hero-area .contents .btn-border {
   border: 2px solid #fff;
@@ -698,9 +742,14 @@ button:focus {
   height: 100%;
   top: 0px;
   left: 0px;
-  background-image: -moz-linear-gradient(0deg, #ffffff 0%, #52658c 100%);
+  background-image: -moz-linear-gradient(0deg, rgba(245, 246, 252, 0.52), rgba(82, 101, 140, 0.729)),url(../img/pets/pets_big.png);
+  background-image: -webkit-linear-gradient(0deg, rgba(245, 246, 252, 0.52), rgba(82, 101, 140, 0.729)),url(../img/pets/pets_big.png);
+  background-image: -ms-linear-gradient(0deg, rgba(245, 246, 252, 0.52), rgba(82, 101, 140, 0.729)),url(../img/pets/pets_big.png);
+  background-size: cover;
+  background-position: center;
+  /* background-image: -moz-linear-gradient(0deg, #ffffff 0%, #52658c 100%);
   background-image: -webkit-linear-gradient(0deg, #ffffff 0%, #52658c 100%);
-  background-image: -ms-linear-gradient(0deg, #ffffff 0%, #52658c 100%); 
+  background-image: -ms-linear-gradient(0deg, #ffffff 0%, #52658c 100%);   */
 }
 
 .hero-area-2 .contents {
@@ -711,6 +760,7 @@ button:focus {
   color: #fff;
   font-size: 42px;
   line-height: 60px;
+  margin-top: 25px;
   margin-bottom: 25px;
   font-weight: 600;
 }
@@ -718,7 +768,7 @@ button:focus {
   color: #fff;
   font-size: 32px;
   line-height: 60px;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   font-weight: 600;
 }
 
@@ -729,7 +779,7 @@ button:focus {
 }
 
 .hero-area-2 .contents .btn {
-  margin-top: 40px;
+  margin-top: 60px;
   margin-right: 20px;
   text-transform: uppercase;
 }
@@ -740,7 +790,8 @@ button:focus {
 }
 
 .hero-area-2 .intro-img {
-  padding: 180px 0 0px;
+  padding: 150px 0px 20px 0px;
+  padding-bottom: 20px
 }
 
 .hero-area-2 .intro-img img {
@@ -843,18 +894,18 @@ button:focus {
 /* ==========================================================================
    Video promo Style
    ========================================================================== */
-.video-promo {
+.abhv {
   background-image: -moz-linear-gradient(0deg, #52658c 0%, #b0bcd4 100%);
   background-image: -webkit-linear-gradient(0deg, #52658c 0%, #b0bcd4 100%);
   background-image: -ms-linear-gradient(0deg, #52658c 0%, #b0bcd4 100%);
 }
 
-.video-promo .video-promo-content {
+.abhv .abhv-content {
   color: #fff;
   margin-bottom: 15px;
 }
 
-.video-promo .video-promo-content .video-popup {
+.abhv .abhv-content .video-popup {
   width: 80px;
   height: 80px;
   background: #fff;
@@ -867,17 +918,16 @@ button:focus {
   font-size: 26px;
 }
 
-.video-promo .video-promo-content .video-popup:hover {
+.abhv .abhv-content .video-popup:hover {
   box-shadow: 0px 8px 9px 0px rgba(96, 94, 94, 0.17);
 }
 
-.video-promo .video-promo-content h2 {
+.abhv .abhv-content h4 {
   color: #fff;
-  font-size: 30px;
-  text-transform: uppercase;
+  font-size: 20px;
 }
 
-.video-promo .video-promo-content p {
+.abhv .abhv-content p {
   color: #fff;
 }
 
@@ -967,7 +1017,7 @@ button:focus {
   margin: 0;
 }
 
-.feature-content {
+/* .feature-content {
   background: #f6fbfd;
 }
 
@@ -1000,20 +1050,32 @@ button:focus {
 
 .single-feature:hover {
   box-shadow: 0px 0px 16px rgba(131, 131, 131, 0.35);
-}
+} */
 
 /* ==========================================================================
  Features Section Start
  ========================================================================== */
-#features {
+
+ .section-text {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  line-height: 35px;
+  padding: 0px 100px 0px 100px;
+  color: #52658c;
+  
+} 
+
+#servicos {
   background: #f6fbfd;
 }
 
-#features .feature-thumb {
+#servicos .feature-thumb {
   margin-top: 15px;
 }
 
-#features .nav {
+#servicos .nav {
   position: relative;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1025,7 +1087,7 @@ button:focus {
   max-width: 1200px;
 }
 
-#features .nav .nav-item {
+#servicos .nav .nav-item {
   position: relative;
   z-index: 1;
   display: block;
@@ -1037,7 +1099,7 @@ button:focus {
   flex: 1;
 }
 
-#features .nav .nav-item .nav-link {
+#servicos .nav .nav-item .nav-link {
   font-size: 20px;
   color: #a0a6ad;
   padding: 30px 0;
@@ -1049,7 +1111,7 @@ button:focus {
   background: transparent;
 }
 
-#features .nav .nav-item .nav-link i {
+#servicos .nav .nav-item .nav-link i {
   font-size: 40px;
   margin-bottom: 5px;
   display: block;
@@ -1058,19 +1120,19 @@ button:focus {
   transition: color 0.2s;
 }
 
-#features .nav-tabs {
+#servicos .nav-tabs {
   background: #f6fbfd;
   margin-top: -100px;
 }
 
-#features .nav-tabs .nav-item.show .nav-link,
-#features .nav-tabs .nav-link.active {
+#servicos .nav-tabs .nav-item.show .nav-link,
+#servicos .nav-tabs .nav-link.active {
   border-bottom: 1px solid #3c9cfd;
   color: #191c1e;
 }
 
-#features .nav-tabs .nav-item.show .nav-link i,
-#features .nav-tabs .nav-link.active i {
+#servicos .nav-tabs .nav-item.show .nav-link i,
+#servicos .nav-tabs .nav-link.active i {
   background: -webkit-linear-gradient(left, #52658c 0%, #b0bcd4 100%);
   background: -o-linear-gradient(left, #52658c 0%, #b0bcd4 100%);
   background: linear-gradient(to right, #52658c 0%, #b0bcd4 100%);
@@ -1078,12 +1140,12 @@ button:focus {
   -webkit-text-fill-color: transparent;
 }
 
-#features .tab-content {
+#servicos .tab-content {
   margin-top: 15px;
   text-align: center;
 }
 
-#features .tab-content .tab-pane {
+#servicos .tab-content .tab-pane {
   padding: 20px 15px;
   font-size: 14px;
   line-height: 26px;
@@ -1113,40 +1175,40 @@ button:focus {
 /* ==========================================================================
   features-two
    ========================================================================== */
-#features-two .img-thumb {
+#quem-somos .img-thumb {
   margin-bottom: 15px;
 }
 
 /* ==========================================================================
     App Features Section Style
    ========================================================================== */
-#app-features {
+#servicos {
   background: #f6fbfd;
 }
 
-#app-features .content-left {
+#servicos .content-left {
   position: relative;
 }
 
-#app-features .content-left span {
+#servicos .content-left span {
   float: right;
   margin-left: 25px;
 }
 
-#app-features .content-right {
+#servicos .content-right {
   position: relative;
 }
 
-#app-features .content-right span {
+#servicos .content-right span {
   float: left;
   margin-right: 25px;
 }
 
-#app-features .box-item {
+#servicos .box-item {
   margin: 30px 0;
 }
 
-#app-features .box-item .icon {
+#servicos .box-item .icon {
   text-align: center;
   margin: 0 15px;
   display: inline-block;
@@ -1165,7 +1227,7 @@ button:focus {
   transition: all 0.2s linear;
 }
 
-#app-features .box-item .icon i {
+#servicos .box-item .icon i {
   color: #fff;
   font-size: 24px;
   line-height: 60px;
@@ -1175,32 +1237,32 @@ button:focus {
   transition: all 0.2s linear;
 }
 
-#app-features .box-item .text h4 {
+#servicos .box-item .text h4 {
   font-weight: 700;
   font-size: 22px;
   margin-bottom: 15px;
   line-height: 22px;
 }
 
-#app-features .box-item .text p {
+#servicos .box-item .text p {
   font-size: 14px;
   line-height: 26px;
 }
 
-#app-features .content-left .text {
+#servicos .content-left .text {
   margin-right: 90px;
 }
 
-#app-features .content-right .text {
+#servicos .content-right .text {
   margin-left: 90px;
 }
 
-#app-features .show-box {
+#servicos .show-box {
   text-align: center;
   margin: 15px 0;
 }
 
-#app-features .show-box img {
+#servicos .show-box img {
   width: 100%;
 }
 
@@ -2363,16 +2425,4 @@ footer .menu li a:hover {
   background-image: -moz-linear-gradient(0deg, #b17beb 0%, #8161d0 100%);
   background-image: -webkit-linear-gradient(0deg, #b17beb 0%, #8161d0 100%);
   background-image: -ms-linear-gradient(0deg, #b17beb 0%, #8161d0 100%);
-}
-
-.btn-subtitle {
-  color: #191c1e;
-  background: #dbecff;
-  text-align: center;
-  border-radius: 30px;
-  padding: 6px 30px;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 20px;
-  font-size: 14px;
 }

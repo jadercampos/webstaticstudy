@@ -11,7 +11,7 @@
             welcomeMessage: "Olá, td bem?",
             brandColor: "#25D366",
             messageText: "Estou entrando em contato pelo site VIDAS, e gostaria de:\n",
-            replyOptions: ['Agendar uma consulta!','Outros assuntos'],
+            replyOptions: ['Atendimento de Emergência','Agendar uma consulta','Suporte ao Veterinário','Trabalhe conosco','Outros assuntos'],
         },
     };
     var h = d.getElementsByTagName(s)[0],

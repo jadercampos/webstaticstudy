@@ -945,3 +945,6 @@
 .lni-zoom-out:before {
   content: "\ea32";
 }
+.lni-user:before {
+  content: "\ea1f";
+}
