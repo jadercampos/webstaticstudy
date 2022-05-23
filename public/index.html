@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SEDT0RDCND"></script>
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K4SWFV6');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7X0M5LJCVF"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-SEDT0RDCND');
+      gtag('config', 'G-7X0M5LJCVF');
     </script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -47,7 +56,10 @@
   </head>
   
   <body>
-
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4SWFV6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Header Section Start -->
     <header id="inicio" class="hero-area-2">    
       <div class="overlay"></div>
@@ -60,27 +72,27 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto w-100 justify-content-end">
               <li class="nav-item">
-                <a class="nav-link page-scroll" title="Início" href="#inicio">Início</a>
+                <a class="nav-link page-scroll" onclick="datalayer.push({'event': 'Home-click'})"  title="Início" href="#inicio">Início</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link page-scroll" title="Serviços" href="#servicos">Serviços</a>
+                <a class="nav-link page-scroll" onclick="datalayer.push({'event': 'Serviços-click'})" title="Serviços" href="#servicos">Serviços</a>
               </li>  
               <li class="nav-item">
-                <a class="nav-link page-scroll" title="Quem Somos" href="#quem-somos">Quem Somos</a>
+                <a class="nav-link page-scroll"  onclick="datalayer.push({'event': 'Quem Somos-click'})" title="Quem Somos" href="#quem-somos">Quem Somos</a>
               </li>                            
               <li class="nav-item">
-                <a class="nav-link page-scroll" title="Equipe" href="#equipe">Equipe</a>
+                <a class="nav-link page-scroll"  onclick="datalayer.push({'event': 'Equipe-click'})" title="Equipe" href="#equipe">Equipe</a>
               </li> 
               <li class="nav-item">
-                <a class="nav-link page-scroll" title="Convênios" href="#convenios">Convênios</a>
+                <a class="nav-link page-scroll"  onclick="datalayer.push({'event': 'Convênios-click'})" title="Convênios" href="#convenios">Convênios</a>
               </li> 
               <li class="nav-item">
-                <a class="nav-link page-scroll" title="Localização" href="#localizacao">Localização</a>
+                <a class="nav-link page-scroll"  onclick="datalayer.push({'event': 'Localização-click'})" title="Localização" href="#localizacao">Localização</a>
               </li> 
             </ul>
           </div>
           <div class="navbar-btn d-none d-sm-inline-block right " style="margin-left:40px">
-            <a href="https://meu.simplespet.com.br/access/login?a=jadercampos2" target="_blank" title="Área do Cliente" class="btn btn-user btn-effect"><i class="lni-user"></i> &nbsp; Área do Cliente</a>
+            <a href="https://meu.simplespet.com.br/access/login?a=jadercampos2"   onclick="datalayer.push({'event': 'AreaCliente-click'})" target="_blank" title="Área do Cliente" class="btn btn-user btn-effect"><i class="lni-user"></i> &nbsp; Área do Cliente</a>
           </div>
         </div>
       </nav>  
