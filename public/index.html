@@ -742,7 +742,7 @@
                       </div>
                       <div class="col-lg-6">
                         <div class="form-group"> 
-                          <textarea class="form-control" id="message" placeholder="Message" rows="7" data-error="Por favor escreva a sua mesnagem" required></textarea>
+                          <textarea class="form-control" id="mensagem" placeholder="Mensagem" rows="7" data-error="Por favor escreva a sua mesnagem" required></textarea>
                           <div class="help-block with-errors"></div>
                         </div>
                       </div>
@@ -756,7 +756,7 @@
                       </div>
                       <div class="col-lg-6">
                         <div class="form-group">
-                          <button class="btn btn-common btn-effect" id="submit" type="submit">Enviar</button>
+                          <button class="btn btn-common btn-effect" id="send" type="button">Enviar</button>
                           <div id="msgSubmit" class="h3 hidden"></div> 
                           <div class="clearfix"></div> 
                         </div>
@@ -876,6 +876,49 @@
     
     <!-- Widget WhatsApp -->
     <script src="assets/js/whatsapp_btn.js" async></script>
+    <script>
+      document.getElementById("send").addEventListener("click", validateForm);
+      function validateForm() {
+          //gets the name
+        let nome = document.getElementById("nome").value;
+        //gets the email
+        let email = document.getElementById("email").value;
+        //gets the email
+        let assunto = document.getElementById("assunto").value;
+        //gets the message
+        let mensagem = document.getElementById("mensagem").value;
+
+        // //checks if all fields have been filled before sending message.
+         if (nome.trim() == "" || email.trim() == "" || assunto.trim() == "" || mensagem.trim() == "") {
+           alert("Preencha os campos do formulário!");
+         } else {
+           sendMessage(nome, email, assunto, mensagem);
+         }
+      }
+      //sends information to firebase
+      function sendMessage(nome, email, assunto, mensagem) {
+        //sends the name, email and message by passing them as url parameters
+        //var msg =  "http://localhost:5001/webstaticstudy-cda1c/us-central1/sendMail?nome=" +
+        var msg =  "https://us-central1-webstaticstudy-cda1c.cloudfunctions.net/sendMail?nome=" +
+          nome +
+          "&email=" +
+          email +
+          "&assunto=" +
+          assunto +
+          "&mensagem=" +
+          mensagem +
+          "";
+          fetch(msg).
+          then(res => {
+            alert('Mensagem enviada com sucesso!\nEm breve entraremos em contato. Obrigado!');
+            document.getElementById("nome").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("assunto").value = "";
+            document.getElementById("mensagem").value = "";})
+          .catch(err => alert('Ocorreram erros ao enviar a sua mensagem!\nPor favor, tente novamente mais tarde!'));
+
+      }
+    </script>
       
   </body>
 </html>
