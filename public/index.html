@@ -24,7 +24,7 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="Bootstrap, Landing page, Template, Registration, Landing">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     <meta name="author" content="Centro Médico Veterinário VIDAS">
     <meta name="description" content="O Centro Médico Veterinário Vidas oferece excelência no atendimento ao tutor e ao animal, além de apoiar a comunidade veterinária como um todo. Estamos localizados em São Caetano do Sul - S.P., e oferecemos os serviços de consultas, internação, especialistas, atendimentos de emergências, cirurgias, exames e terapia.">
     <title>Centro Médico Veterinário VIDAS - Atendimento 24 horas em São Caetano do Sul</title>
@@ -887,63 +887,15 @@
     <script src="assets/js/jquery.easing.min.js"></script>     
     <script src="assets/js/wow.js" ></script>   
     <script src="assets/js/jquery.counterup.min.js" ></script>     
-    <script src="assets/js/nivo-lightbox.js" async></script>     
+    <script src="assets/js/nivo-lightbox.js"></script>     
     <script src="assets/js/jquery.magnific-popup.min.js" ></script>     
-    <script src="assets/js/waypoints.min.js" async></script>      
-    <script src="assets/js/form-validator.min.js" async></script>
-    <script src="assets/js/contact-form-script.js" async></script>   
-    <script src="assets/js/main.js" ></script>
-    
+    <script src="assets/js/waypoints.min.js"></script>      
+    <script src="assets/js/main.js" ></script>    
     <!-- Widget WhatsApp -->
-    <script src="assets/js/whatsapp_btn.js" async></script>
-    <script>
-      document.getElementById("send").addEventListener("click", validateForm);
-      function validateForm() {
-          //gets the name
-        let nome = document.getElementById("nome").value;
-        //gets the email
-        let email = document.getElementById("email").value;
-        //gets the email
-        let assunto = document.getElementById("assunto").value;
-        //gets the message
-        let mensagem = document.getElementById("mensagem").value;
-
-        // //checks if all fields have been filled before sending message.
-         if (nome.trim() == "" || email.trim() == "" || assunto.trim() == "" || mensagem.trim() == "") {
-          ShowMyModal("Atenção!", "Você deve preencher todos os campos do formulário!");
-         } else {
-          sendMessage(nome, email, assunto, mensagem);
-         }
-      }
-      //sends information to firebase
-      function sendMessage(nome, email, assunto, mensagem) {
-        //sends the name, email and message by passing them as url parameters
-        //var msg =  "http://localhost:5001/webstaticstudy-cda1c/us-central1/sendMail?nome=" +
-        var msg =  "https://us-central1-webstaticstudy-cda1c.cloudfunctions.net/sendMail?nome=" +
-          nome +
-          "&email=" +
-          email +
-          "&assunto=" +
-          assunto +
-          "&mensagem=" +
-          mensagem +
-          "";
-          fetch(msg).
-          then(res => {
-            ShowMyModal("Obrigado pelo contato!!", "Mensagem enviada com sucesso!<br />Em breve entraremos em contato. Obrigado!")
-            document.getElementById("nome").value = "";
-            document.getElementById("email").value = "";
-            document.getElementById("assunto").value = "";
-            document.getElementById("mensagem").value = "";})
-          .catch(err => ShowMyModal("Atenção!", "Ocorreram erros ao enviar a sua mensagem!\nPor favor, tente novamente mais tarde!"));
-
-      }
-      function ShowMyModal(titulo, mensagem){
-        $('#MyModalTitle').html(titulo);
-        $('#MyModalMessage').html("<h6>" + mensagem + "</h6>");
-        $('#myModal').modal("show");
-      }
-    </script>
-      
+    <script src="assets/js/whatsapp_btn.js"></script>
+    <!-- Widget Modal Message -->
+    <script src="assets/js/myModal.js"></script>
+    <!-- Widget Send Email -->
+    <script src="assets/js/sendEmail.js"></script>
   </body>
 </html>
