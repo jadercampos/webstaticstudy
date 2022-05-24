@@ -856,6 +856,26 @@
     </div>
     <!-- End Preloader -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 class="modal-title" style="font-weight: 800;" id="MyModalTitle">Modal title</h6>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div id="MyModalMessage" class="modal-body head-title">
+              Message
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Modal -->
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="assets/js/jquery-min.js"></script>
     <script src="assets/js/popper.min.js"></script>
@@ -890,9 +910,9 @@
 
         // //checks if all fields have been filled before sending message.
          if (nome.trim() == "" || email.trim() == "" || assunto.trim() == "" || mensagem.trim() == "") {
-           alert("Preencha os campos do formulário!");
+          ShowMyModal("Atenção!", "Você deve preencher todos os campos do formulário!");
          } else {
-           sendMessage(nome, email, assunto, mensagem);
+          sendMessage(nome, email, assunto, mensagem);
          }
       }
       //sends information to firebase
@@ -910,13 +930,18 @@
           "";
           fetch(msg).
           then(res => {
-            alert('Mensagem enviada com sucesso!\nEm breve entraremos em contato. Obrigado!');
+            ShowMyModal("Obrigado pelo contato!!", "Mensagem enviada com sucesso!<br />Em breve entraremos em contato. Obrigado!")
             document.getElementById("nome").value = "";
             document.getElementById("email").value = "";
             document.getElementById("assunto").value = "";
             document.getElementById("mensagem").value = "";})
-          .catch(err => alert('Ocorreram erros ao enviar a sua mensagem!\nPor favor, tente novamente mais tarde!'));
+          .catch(err => ShowMyModal("Atenção!", "Ocorreram erros ao enviar a sua mensagem!\nPor favor, tente novamente mais tarde!"));
 
+      }
+      function ShowMyModal(titulo, mensagem){
+        $('#MyModalTitle').html(titulo);
+        $('#MyModalMessage').html("<h6>" + mensagem + "</h6>");
+        $('#myModal').modal("show");
       }
     </script>
       

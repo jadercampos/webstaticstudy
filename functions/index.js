@@ -15,10 +15,10 @@ let transporter = nodemailer.createTransport({
 
 exports.sendMail = functions.https.onRequest((request, response) => {
   cors(request, response, () => {
-    const nome = "<strong>Nome: </strong><br />" + request.query.nome;
-    const email = "<strong>E-mail: </strong><br />" + request.query.email;
-    const assunto = "<strong>Assunto: </strong><br />" + request.query.assunto;
-    const mensagem = "<strong>Mensagem: </strong><br />" + request.query.mensagem;
+    const nome = "<strong>Nome: </strong>" + request.query.nome + "<br />";
+    const email = "<strong>E-mail: </strong>" + request.query.email + "<br />";
+    const assunto = "<strong>Assunto: </strong>" + request.query.assunto + "<br />";
+    const mensagem = "<strong>Mensagem: </strong>" + request.query.mensagem;
     const mailOptions = {
       from: "Contato - VIDAS <contato@vetvidas.com.br>", 
       to: "contato@vetvidas.com.br", 
