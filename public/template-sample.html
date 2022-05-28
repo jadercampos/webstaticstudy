@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <template id="list-item-template">
-    <div class="col-lg-2 col-md-6 col-xs-12 blog-item">
-        <!-- Blog Item Starts -->
-        <div class="blog-item-wrapper">
-            <div class="blog-item-img">
-                <img class="imagem" src="assets/img/convenios/petmaisvida.webp" alt="Pet Mais Vida">
+    <template id="veterinariosTemplate">
+        <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="single-team wow bounceIn" data-wow-delay="0.3s">
+              <div class="team-thumb">
+                <img class="imgVet" src="assets/img/team/draAdrianaCucomo.webp" alt="Dr&ordf;. Adriana Cucomo">
+                <ul class="social-list d-none">
+                  <li class="facebook"><a title="Facebook" target="_blank" href="https://www.facebook.com/adriana.cucomo"><i class="lni-facebook-filled"></i></a></li>
+                  <li class="instagram"><a title="Instagram" target="_blank" href="https://www.instagram.com/dra.adrianacucomo/"><i class="lni-instagram-filled"></i></a></li>
+                  <li class="linkedin"><a title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/adrianacucomomedvet/"><i class="lni-linkedin-fill"></i></a></li>
+                </ul>
+              </div>
+              <div class="team-details">
+                <div class="team-inner">
+                  <h4 class="team-title"><span class="nomeVet">Dr&ordf;. Adriana Cucomo</span></h4>
+                  <p><strong>CRMV:</strong><span class="crmvVet">S.P. - 41.315</span></p>
+                  <ul class="especialidadesVet">
+                    <li>- Clínica de Pequenos Animais</li>
+                    <li>- Dermatologia</li>
+                    <li>- Oftalmologia</li>
+                    <li>- Cirurgia Oftalmológica</li>
+                    <li>- Cirurgia de Tecidos Moles </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="blog-item-text"> 
-            <h3 class="nomeConvenio">PetMaisVida</h3>
-            <div class="author">
-                <span><a target="_blank" class="link" href="https://www.petmaisvida.com.br/">Visitar o site</a></span>
-            </div>
-            </div>
-        </div>
-        <!-- Blog Item Wrapper Ends-->
-        </div>
+          </div>
     </template>
-    <div id="convenioPlaceholder"></div>
-    <script src="assets/js/convenioCard.js"></script>
+    <div id="veterinariosPlaceholder"></div>
+    <script src="assets/js/veterinariosCard.js"></script>
 </body>
 </html>

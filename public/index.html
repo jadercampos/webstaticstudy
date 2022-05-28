@@ -386,92 +386,34 @@
           <h2 class="section-title wow fadeInDown" data-wow-delay="0.1s">Equipe</h2>
           <hr class="section-line wow fadeInUp" data-wow-delay="0.2s"/>
         </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-xs-12">
-            <div class="single-team wow bounceIn" data-wow-delay="0.3s">
-              <div class="team-thumb">
-                <img src="assets/img/team/draAdrianaCucomo.webp" alt="Dr&ordf;. Adriana Cucomo">
-                <ul class="social-list">
-                  <li class="facebook"><a title="Facebook" target="_blank" href="https://www.facebook.com/adriana.cucomo"><i class="lni-facebook-filled"></i></a></li>
-                  <li class="instagram"><a title="Instagram" target="_blank" href="https://www.instagram.com/dra.adrianacucomo/"><i class="lni-instagram-filled"></i></a></li>
-                  <li class="linkedin"><a title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/adrianacucomomedvet/"><i class="lni-linkedin-fill"></i></a></li>
-                </ul>
-              </div>
-              <div class="team-details">
-                <div class="team-inner">
-                  <h4 class="team-title">Dr&ordf;. Adriana Cucomo</h4>
-                  <p><strong>CRMV-SP:</strong> 41.315</p>
-                  <ul>
-                   <li>- Clínica de Pequenos Animais</li>
-                   <li>- Dermatologia</li>
-                   <li>- Oftalmologia</li>
-                   <li>- Cirurgia Oftalmológica</li>
-                   <li>- Cirurgia de Tecidos Moles </li>
-                  </ul>
+        <div id="veterinariosPlaceholder" class="row">
+          <template id="veterinariosTemplate">
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="single-team wow bounceIn" data-wow-delay="0.3s">
+                  <div class="team-thumb">
+                    <img class="imgVet" src="assets/img/team/draAdrianaCucomo.webp" alt="Dr&ordf;. Adriana Cucomo">
+                    <ul class="social-list d-none">
+                      <li class="facebook"><a title="Facebook" target="_blank" href="https://www.facebook.com/adriana.cucomo"><i class="lni-facebook-filled"></i></a></li>
+                      <li class="instagram"><a title="Instagram" target="_blank" href="https://www.instagram.com/dra.adrianacucomo/"><i class="lni-instagram-filled"></i></a></li>
+                      <li class="linkedin"><a title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/adrianacucomomedvet/"><i class="lni-linkedin-fill"></i></a></li>
+                    </ul>
+                  </div>
+                  <div class="team-details">
+                    <div class="team-inner">
+                      <h4 class="team-title"><span class="nomeVet">Dr&ordf;. Adriana Cucomo</span></h4>
+                      <p><strong>CRMV: </strong><span class="crmvVet">S.P. - 41.315</span></p>
+                      <ul class="especialidadesVet">
+                        <li>- Clínica de Pequenos Animais</li>
+                        <li>- Dermatologia</li>
+                        <li>- Oftalmologia</li>
+                        <li>- Cirurgia Oftalmológica</li>
+                        <li>- Cirurgia de Tecidos Moles </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-xs-12">
-            <div class="single-team wow bounceIn" data-wow-delay="0.4s">
-              <div class="team-thumb">
-                <img src="assets/img/team/draRenataGomes.webp" alt="Dr&ordf;. Renata Gomes">
-              </div>
-              <div class="team-details">
-                <div class="team-inner">
-                  <h4 class="team-title">Dr&ordf;. Renata Gomes</h4>
-                  <p><strong>CRMV-SP:</strong> 39.398</p>
-                  <ul>
-                   <li>- Clínica de Animais Silvestres</li>
-                   <li>- Cirurgia de Animais Silvestres</li>
-                   <li>&nbsp;</li>
-                   <li>&nbsp;</li>
-                   <li>&nbsp;</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-xs-12">
-            <div class="single-team wow bounceIn" data-wow-delay="0.5s">
-              <div class="team-thumb">
-                <img src="assets/img/team/draSimoneDevus.webp" alt="Dr&ordf;. Simone Devus">
-              </div>
-              <div class="team-details">
-                <div class="team-inner">                  
-                  <h4 class="team-title">Dr&ordf;. Simone Devus</h4>
-                  <p><strong>CRMV-SP:</strong> 45.698</p>
-                  <ul>
-                   <li>- Cirurgia de Tecidos Moles </li>
-                   <li>&nbsp;</li>
-                   <li>&nbsp;</li>
-                   <li>&nbsp;</li>
-                   <li>&nbsp;</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-xs-12">
-            <div class="single-team wow bounceIn" data-wow-delay="0.6s">
-              <div class="team-thumb">
-                <img src="assets/img/team/draThamiresBrito.webp" alt="Dr&ordf;. Thamires Brito">
-              </div>
-              <div class="team-details">
-                <div class="team-inner">
-                  <h4 class="team-title">Dr&ordf;. Thamires Brito</h4>
-                  <p><strong>CRMV-SP:</strong> 45.698</p>
-                  <ul>
-                   <li>- Fisioterapia</li>
-                   <li>- Acupuntura</li>
-                   <li>- Ozonioterapia</li>
-                   <li>- Medicina Cannabica</li>
-                   <li>- Reiki</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+          </template>
         </div>
       </div>
     </section>
@@ -486,8 +428,8 @@
           <hr class="section-line wow fadeInUp" data-wow-delay="0.2s"/>
           <p class="section-text wow fadeInUp" data-wow-delay="0.3s"  data-wow-offset="200">Atendemos os principais planos de saúde animal do Brasil.</p>         
          </div>
-        <div id="convenioPlaceholder" class="row">
-          <template id="list-item-template">
+        <div id="conveniosPlaceholder" class="row">
+          <template id="conveniosTemplate">
             <div class="col-lg-2 col-md-6 col-xs-12 blog-item">
                 <!-- Convênio Card Starts -->
                 <div class="blog-item-wrapper">
@@ -730,6 +672,8 @@
     <!-- Widget Send Email -->
     <script src="assets/js/sendEmail.js"></script>
     <!-- Widget Convênios Card -->
-    <script src="assets/js/convenioCard.js"></script>    
+    <script src="assets/js/conveniosCard.js"></script>    
+    <!-- Widget Veterinários Card -->    
+    <script src="assets/js/veterinariosCard.js"></script>
   </body>
 </html>

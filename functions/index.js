@@ -74,12 +74,36 @@ exports.getConvenios = functions.https.onRequest((request, response) => {
     db.collection("convenios").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         convenio = doc.data();
-        convenios.push(new Convenio(nome=convenio.nome, imagem=convenio.imagem, link=convenio.link));
+        convenios.push(new Convenio(convenio.nome, convenio.imagem, convenio.link));
       });
       return response.status(200).send(convenios);     
     });
   });
 });
 
+class Veterinario {
+  constructor(nome, imagem, crmv, especialidades, facebook, instagram, linkedin) {
+      this.nome = nome;
+      this.imagem = imagem;
+      this.crmv = crmv;
+      this.especialidades = especialidades;
+      this.facebook = facebook;
+      this.instagram = instagram;
+      this.linkedin = linkedin;
+  }
+}
+exports.getVeterinarios = functions.https.onRequest((request, response) => {
+  cors(request, response, () => {
+    const db = admin.firestore();
+    var veterinarios=[];
+    db.collection("veterinarios").orderBy("nome", "asc").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        veterinario = doc.data();
+        veterinarios.push(new Veterinario(veterinario.nome, veterinario.imagem, veterinario.crmv, veterinario.especialidades, veterinario.facebook, veterinario. instagram, veterinario.linkedin));
+      });
+      return response.status(200).send(veterinarios);     
+    });
+  });
+});
 
 

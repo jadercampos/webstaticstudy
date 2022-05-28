@@ -18,8 +18,8 @@ function validateForm() {
 }
 //sends information to firebase
 function sendMessage(nome, email, assunto, mensagem) {
- var msg =  "http://localhost:5001/webstaticstudy-cda1c/us-central1/sendMail?nome=" +
-     //var msg =  "https://us-central1-webstaticstudy-cda1c.cloudfunctions.net/sendMail?nome=" +
+ //var msg =  "http://localhost:5001/webstaticstudy-cda1c/us-central1/sendMail?nome=" +
+  var msg =  "https://us-central1-webstaticstudy-cda1c.cloudfunctions.net/sendMail?nome=" +
     nome +
     "&email=" +
     email +
