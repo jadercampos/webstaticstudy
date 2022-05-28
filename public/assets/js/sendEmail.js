@@ -18,9 +18,8 @@ function validateForm() {
 }
 //sends information to firebase
 function sendMessage(nome, email, assunto, mensagem) {
-  //sends the name, email and message by passing them as url parameters
-  //var msg =  "http://localhost:5001/webstaticstudy-cda1c/us-central1/sendMail?nome=" +
-    var msg =  "https://us-central1-webstaticstudy-cda1c.cloudfunctions.net/sendMail?nome=" +
+ var msg =  "http://localhost:5001/webstaticstudy-cda1c/us-central1/sendMail?nome=" +
+     //var msg =  "https://us-central1-webstaticstudy-cda1c.cloudfunctions.net/sendMail?nome=" +
     nome +
     "&email=" +
     email +
@@ -31,11 +30,11 @@ function sendMessage(nome, email, assunto, mensagem) {
     "";
     fetch(msg).
     then(res => {
-      ShowMyModal("Obrigado pelo contato!!", "Mensagem enviada com sucesso!<br />Em breve entraremos em contato.<br />Obrigado!")
+      ShowMyModal("Obrigado pelo contato!!", "Mensagem enviada com sucesso!<br /><br />Em breve entraremos em contato.<br /><br /><br />Obrigado!")
       document.getElementById("nome").value = "";
       document.getElementById("email").value = "";
       document.getElementById("assunto").value = "";
       document.getElementById("mensagem").value = "";})
-    .catch(err => ShowMyModal("Atenção!", "Ocorreram erros ao enviar a sua mensagem!\nPor favor, tente novamente mais tarde!"));
+    .catch(err => ShowMyModal("Atenção!", "Ocorreram erros ao enviar a sua mensagem!<br /><br />Por favor, tente novamente mais tarde!"));
 
 }
