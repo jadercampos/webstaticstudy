@@ -5,17 +5,30 @@ function ShowMyModal(titulo, mensagem){
     $('.modal-footer').removeClass('d-none')
 }
 window.addEventListener('load', function() {
-    var d = new Date();
-    if (d.getDay() == 6) {
-        ShowCampanha();
-    }
+    ShowCampanha();
 });
 
+class Campanha {
+    constructor(titulo, imagem, diasSemana, ativa) {
+        this.titulo = titulo;
+        this.imagem = imagem;
+        this.diasSemana = diasSemana;
+        this.ativa = ativa;
+    }
+  }
+
 function ShowCampanha(){
-    $('#MyModalTitle').html("Sábado é dia de Vacina!");
-    var texto = "<img width='470px' src='assets/img/campanhas/sabadoVacinas.webp' /> <br />";
-    texto += "<a style='text-align:center; color:#fff; border-color:#fff; margin: 10px 20px 10px 90px;' href='https://api.whatsapp.com/send/?phone=%2B5511978285612&text=Ol%C3%A1%0DEu+gostaria+de+agendar+uma+consulta%21&app_absent=0' target='_blank' class='btn btn-common-wa btn-border btn-effect'><i class='lni-phone-handset'></i>&nbsp; Agende uma consulta</a>";
-    $('#MyModalMessage').html(texto);
-    $('#myModal').modal("show");
-    $('.modal-footer').addClass('d-none')
+    //fetch('http://localhost:5001/webstaticstudy-cda1c/us-central1/getCampanha')
+    fetch('https://us-central1-webstaticstudy-cda1c.cloudfunctions.net/getCampanha', {cache: "no-store"})
+        .then(resCampanha => {
+            return resCampanha.json();
+        })
+        .then(campanha => {
+            $('#MyModalTitle').html(campanha.titulo);
+            let texto = "<img width='100%' src='" + campanha.imagem + "' /> <br />";
+                texto += "<a style='text-align:center; color:#fff; border-color:#fff; margin: 10px 20px 10px 90px;' href='https://api.whatsapp.com/send/?phone=%2B5511978285612&text=Ol%C3%A1%0DEu+gostaria+de+agendar+uma+consulta%21&app_absent=0' target='_blank' class='btn btn-common-wa btn-border btn-effect'><i class='lni-phone-handset'></i>&nbsp; Agende uma consulta</a>";
+                $('#MyModalMessage').html(texto);
+                $('#myModal').modal("show");
+                $('.modal-footer').addClass('d-none');
+        });
 }

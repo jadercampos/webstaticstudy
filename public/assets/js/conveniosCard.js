@@ -7,9 +7,9 @@ window.addEventListener('load', function() {
 
 function ObtemConvenios(){
     //fetch('http://localhost:5001/webstaticstudy-cda1c/us-central1/getConvenios')
-    fetch('https://us-central1-webstaticstudy-cda1c.cloudfunctions.net/getConvenios')
-        .then(res => {
-            return res.json();
+    fetch('https://us-central1-webstaticstudy-cda1c.cloudfunctions.net/getConvenios', {cache: "no-store"})
+        .then(resConvenio => {
+            return resConvenio.json();
         })
         .then(convenios => {
             convenios.forEach(convenio => {

@@ -7,9 +7,9 @@ window.addEventListener('load', function() {
 
 function ObtemVeterinarios(){
     //fetch('http://localhost:5001/webstaticstudy-cda1c/us-central1/getVeterinarios')
-    fetch('https://us-central1-webstaticstudy-cda1c.cloudfunctions.net/getVeterinarios')
-        .then(res => {
-            return res.json();
+    fetch('https://us-central1-webstaticstudy-cda1c.cloudfunctions.net/getVeterinarios', {cache: "no-store"})
+        .then(resVet => {
+            return resVet.json();
         })
         .then(veterinarios => {
             veterinarios.forEach(vet => {
@@ -25,9 +25,9 @@ function AddVet(vet){
     cardVet.querySelector('.crmvVet').innerHTML = vet.crmv;
     cardVet.querySelector('.imgVet').src = vet.imagem;
     cardVet.querySelector('.imgVet').alt = vet.nome;
-    cardVet.querySelector('.facebook').href = vet.facebook;
-    cardVet.querySelector('.instagram').href = vet.instagram;
-    cardVet.querySelector('.linkedin').href = vet.linkedin;
+    // cardVet.querySelector('.facebook').href = vet.facebook;
+    // cardVet.querySelector('.instagram').href = vet.instagram;
+    // cardVet.querySelector('.linkedin').href = vet.linkedin;
     vet.especialidades.forEach(especialidade => {
         especialidades += "<li>"+ especialidade + "</li>" 
     });

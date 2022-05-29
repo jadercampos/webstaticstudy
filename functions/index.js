@@ -95,7 +95,7 @@ class Veterinario {
 exports.getVeterinarios = functions.https.onRequest((request, response) => {
   cors(request, response, () => {
     const db = admin.firestore();
-    var veterinarios=[];
+    var veterinarios = [];
     db.collection("veterinarios").orderBy("nome", "asc").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         veterinario = doc.data();
@@ -105,5 +105,30 @@ exports.getVeterinarios = functions.https.onRequest((request, response) => {
     });
   });
 });
+
+class Campanha {
+  constructor(titulo, imagem, diasSemana, ativa) {
+      this.titulo = titulo;
+      this.imagem = imagem;
+      this.diasSemana = diasSemana;
+      this.ativa = ativa;
+  }
+}
+
+exports.getCampanha = functions.https.onRequest((request, response) => {
+  cors(request, response, () => {
+    const db = admin.firestore();
+    let hoje = new Date().getDay();
+    var campanhas = [];
+    db.collection("campanhas").where("ativa", "==", true).where("diasSemana", "array-contains", hoje).get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        let campanha = doc.data();
+        campanhas.push(new Campanha(campanha.titulo, campanha.imagem, campanha.diasSemana, campanha.ativa));
+      });
+      return response.status(200).send(campanhas[Math.floor(Math.random()*campanhas.length)]);     
+    });
+  });
+});
+
 
 
