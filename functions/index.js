@@ -129,6 +129,3 @@ exports.getCampanha = functions.https.onRequest((request, response) => {
     });
   });
 });
-
-
-
