@@ -11,3 +11,6 @@ Main Comands
 `firebase emulators:start --only [hosting|services ...]`
 
 
+Deploy em produção
+
+`firebase deploy --only hosting`
